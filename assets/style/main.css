@@ -76,16 +76,18 @@ body {
 /* メイン画像上のフォント設定 */
 
 .top__container {
-  position: absolute;
-  top: 267px;
-  left: 118px;
+  padding-top: 197px;
+  padding-left: 120px;
 }
 
 .top__brand-name {
-  position: absolute;
-  left: 50%;
-  top: 28px;
-  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
+  padding-left: 6px;
+}
+
+.top__brand-name h2 {
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0.2em;
@@ -208,9 +210,7 @@ body {
 ******************************************************************************************/
 /* コンテナをFlexboxに設定し、各アイテムを横並びにします。 */
 .voices-items__inner {
-  display: flex;
-  justify-content: center; /* アイテムを水平中央に配置 */
-  gap: 40px; /* アイテム間の間隔を設定 */
+
 }
 
 /* 各アイテムのスタイルを定義します。 */
