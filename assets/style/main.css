@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+/* フォントのインポート ***********************************
+************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Marcellus&family=Noto+Sans+JP:wght@900&family=Noto+Serif+JP&display=swap');
+
+
+/* 共通の設定 ***************************************
+****************************************************/
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+
+/* 各セクションの余白設定 */
+.cream__background {
+  margin: 48px 0;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+.section-subtitle {
+  margin-bottom: 40px;
+}
+
+/* フォントの設定 */
+
+body {
+  font-family: "Noto Serif JP", serif;
+}
+
+.top__brand-name,
+.top__title,
+.footer__shop-name {
+  font-family: "Marcellus", serif;
+}
+
+.section-title,
+.cream-description__title {
+  font-family: "EB Garamond", serif;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  font-size: 20px;
+}
+
+
+/* トップ画像類の設定 *******************************
+***************************************************/
+.top__background-img {
+  height: 720px;
+  background-image: url("../image/main_img.jpg");
+}
+
+/* メイン画像上のフォント設定 */
+
+.top__container {
+  position: absolute;
+  top: 267px;
+  left: 118px;
+}
+
+.top__brand-name {
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+.top__title {
+  font-size: 50px;
+  line-height: 1.4em;
+  letter-spacing: 0.3em;
+}
+
+.top__subtitle {
+  font-size: 25px;
+  margin-top: 6px;
+  letter-spacing: 0.3em;
+}
+
+/* クリーム購入ボタン類セクションの設定 **********************************
+***********************************************************************/
+.cream__background {
+  display: flex;
+  justify-content: center;
+}
+
+.cream-buy {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  background-color: #F0F4FF;
+  padding: 42px 46px;
+  margin: auto 0;
+}
+
+.cream-buy__title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.cream-buy__price {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.cream-buy__button {
+  display: inline-block;
+  width: 300px;
+  padding: 16px 20px;
+  background-color: #f0f0f0; /* 軽い背景色 */
+  color: black; /* テキスト色 */
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none; /* リンクの下線を消す */
+  border-radius: 50px; /* 角丸 */
+  transition: background-color 0.3s; /* 背景色のトランジション */
+}
+
+.cream-buy__button:hover {
+  background-color: #e0e0e0; /* ホバー時の背景色 */
+}
+
+.cream-buy__button--onlineshop {
+  background-color: #46C4DB; /* オンラインショップへのボタンの色 */
+  color: white; /* オンラインショップへのボタンのテキスト色 */
+  margin-right: 27px;
+}
+
+.cream-buy__button--buy {
+  background-color: #5DD5AB; /* 購入ボタンの色 */
+  color: white; /* 購入ボタンのテキスト色 */
+}
+
+
+/* クリームの説明セクションの設定 *****************************
+*************************************************************/
+
+/* 背景画像の設定 */
+.cream-description__background-img {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background-image: url("../image/cream_img.jpg");
+}
+
+/* 文字の表示位置、コンテンツサイズの設定 */
+.cream-description__sentence {
+  position: absolute;
+  top: 123px;
+  right: 131px;
+  width: 435px;
+  height: 200px;
+}
+
+.cream-description__title {
+  font-size: 38px;
+  color: white;
+}
+
+.cream-description__sub-title {
+  margin-top: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.cream-description__text {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 32px;
+  color: white;
+
+}
+
+/* フォントの細かい設定 */
+
+
+
+/* お客様の声セクションの設定 **************************************************************
+******************************************************************************************/
+/* コンテナをFlexboxに設定し、各アイテムを横並びにします。 */
+.voices-items__inner {
+  display: flex;
+  justify-content: center; /* アイテムを水平中央に配置 */
+  gap: 40px; /* アイテム間の間隔を設定 */
+}
+
+/* 各アイテムのスタイルを定義します。 */
+.voices-items__item {
+  background-color: #DBF7F9; /* 軽い青色の背景 */
+  padding: 46px 20px; /* 内側のパディング */
+  text-align: center; /* テキストを中央揃えに */
+  width: 300px; /* アイテムの幅を設定 */
+  height: 390px;
+}
+
+/* 画像を中央揃えにするためにFlexboxを適用します。 */
+.voices-items__customer-img {
+  display: flex;
+  justify-content: center; /* 水平方向に中央揃え */
+  align-items: center; /* 垂直方向に中央揃え */
+  width: 100%; /* 親要素いっぱいの幅 */
+  height: 100px; /* 画像の高さを設定、必要に応じて調整 */
+}
+
+/* 画像のスタイルを定義します。 */
+.voices-items__customer-img img {
+  border-radius: 50%; /* 画像を丸くする */
+  width: 100px; /* 画像の幅を設定 */
+  height: auto; /* 高さを自動で調整 */
+  margin-bottom: 10px; /* 画像とテキストの間隔を設定 */
+}
+
+/* 名前のスタイルを定義します。 */
+.voices-items__name {
+  font-size: 1.2em; /* 名前のフォントサイズを設定 */
+  margin-bottom: 10px; /* 名前とテキストの間隔を設定 */
+}
+
+/* テキストのスタイルを定義します。 */
+.voices-items__text {
+  font-size: 0.9em; /* テキストのフォントサイズを設定 */
+}
+
+
+
+
+/* Q&Aセクションの設定 ******************************
+***************************************************/
+
+/* 背景のグラデーション設定 */
+.question-answer {
+  padding: 40px 0;
+  background-image: linear-gradient(to right, #F4FFE8, #C6F0FE);
+}
+
+.question-answer__inner {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.question-answer__box {
+  margin-bottom: 25px;
+}
+
+.question-answer__question {
+  background-color: #014897;
+  border: 1px solid #014897;
+  padding: 20px 25px;
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+}
+
+.question-answer__toggle {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px; /* Adjusted for center alignment */
+}
+
+.question-answer__toggle:before {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.question-answer__question.open .question-answer__toggle:before {
+  content: "ー";
+}
+
+.question-answer__answer {
+  display: none;
+  padding: 25px 30px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+.question-answer__text {
+  display: block;
+  padding-left: 35px;
+  position: relative;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.question-answer__text::before {
+  content: "Q．";
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "EB Garamond", serif;
+}
+
+.question-answer__answer .question-answer__text::before {
+  content: "A．";
+  color: #de0000;
+}
+
+
+/* フッターの設定 *******************************************************************
+************************************************************************************/
+
+/* フッターセクションのコンテンツ均等配置設定と背景設定 */
+.footer__background-color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 104px;
+  background-color: #0071CE;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 32px;
+}
+
+.footer__shop-name {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.footer__link {
+  font-size: 14px;
+  color: white;
+}
+
+.footer__copy-right {
+  font-size: 12px;
+  color: white;
+}
+
+/* footer__link--policyの左右の余白設定 */
+.footer__link--policy {
+  margin: 0 26px;
+}
+
+
+@media screen and (max-width: 750px) {
+  .question-answer__inner {
+      width: auto;
+  }
+  .question-answer__toggle {
+      right: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .question-answer__toggle {
+      right: 0.4rem;
+  }
+}
+
+/* 応答性のあるデザインのためのメディアクエリ */
+@media (max-width: 768px) {
+  .voices-items__inner {
+      flex-direction: column; /* スクリーンが狭いときにアイテムを縦に並べる */
+      gap: 15px;
+  }
+}
