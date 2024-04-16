@@ -1,9 +1,10 @@
 $('.voices-items__inner').slick({
   infinite: true, // 無限ループスライド
+  dots: true,
   slidesToShow: 3, // 一度に表示するスライド数
   slidesToScroll: 1, // 一度にスクロールするスライド数
-  prevArrow: '<button type="button" class="slick-prev">Previous</button>', // 前へボタンのカスタムHTML
-  nextArrow: '<button type="button" class="slick-next">Next</button>', // 次へボタンのカスタムHTML
+  // prevArrow: '<img src="../image/arrow-left-circle-fill.png" class="slide-arrow prev-arrow">',
+  // nextArrow: '<img src="../image/arrow-right-circle-fill.png" class="slide-arrow next-arrow">',
   responsive: [ // レスポンシブ設定
       {
           breakpoint: 1024, // この幅以下で切り替える
@@ -18,4 +19,14 @@ $('.voices-items__inner').slick({
           }
       }
   ]
+});
+
+
+
+$(function(){
+    $('.question-answer__question').click(function(){
+        $(this).next().slideToggle();
+        $(this).toggleClass("open");
+        return false;
+    });
 });

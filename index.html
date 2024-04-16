@@ -13,14 +13,22 @@
     <meta property="og:url" content="https://example.com/index.html">
     <meta property="og:site_name" content="Kira-meki">
 
-    <!-- リセットCSSのCDN-->
+    <!-- jQueryのCDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- Slick CarouselのCDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- リセットCSSのCDN -->
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
     <!-- スタイルシート -->
     <link rel="stylesheet" href="assets/style/main.css">
-    <!-- jquery&slickのcdn -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Slick CarouselのCSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- オプションでSlick CarouselのデフォルトテーマのCSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 </head>
+
 
 
 <body>
@@ -38,7 +46,7 @@
     </div>
 
     <!-- クリーム購入、オンラインショップ誘導セクション -->
-    <div class="cream__background">
+    <div class="cream__background cream__background--top">
         <div class="cream-buy">
             <div class="cream-buy__text">
                 <div class="cream-buy__title">
@@ -113,8 +121,45 @@
                     ここにテキストが入ります。ここにテキストが入ります。
                 </p>
             </div>
+            <div class="voices-items__item">
+                <div class="voices-items__customer-img">
+                    <img src="assets/image/customer_img_01.png" alt="">
+                </div>
+                <h4 class="voices-items__name">Aさん</h4>
+                <p class="voices-items__text">
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+            </div>
+            <div class="voices-items__item">
+                <div class="voices-items__customer-img">
+                    <img src="assets/image/customer_img_02.png" alt="Bさん">
+                </div>
+                <h4 class="voices-items__name">Bさん</h4>
+                <p class="voices-items__text">
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+            </div>
+            <div class="voices-items__item">
+                <div class="voices-items__customer-img">
+                    <img src="assets/image/customer_img_03.png" alt="Cさん">
+                </div>
+                <h4 class="voices-items__name">Cさん</h4>
+                <p class="voices-items__text">
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+            </div>
         </div>
     </div>
+
 
     <!-- Q&Aセクション -->
     <div class="question-answer section">
@@ -124,45 +169,57 @@
             <div class="question-answer__inner">
                 <div class="question-answer__box">
                     <div class="question-answer__question">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <p class="question-answer__text question-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
                         <div class="question-answer__toggle"></div>
                     </div>
                     <div class="question-answer__answer">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        <p class="question-answer__text answer-text">
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
                 </div>
                 <div class="question-answer__box">
                     <div class="question-answer__question">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <p class="question-answer__text question-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
                         <div class="question-answer__toggle"></div>
                     </div>
                     <div class="question-answer__answer">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        <p class="question-answer__text answer-text">
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
                 </div>
                 <div class="question-answer__box">
                     <div class="question-answer__question">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <p class="question-answer__text question-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
                         <div class="question-answer__toggle"></div>
                     </div>
                     <div class="question-answer__answer">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        <p class="question-answer__text answer-text">
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
                 </div>
                 <div class="question-answer__box">
                     <div class="question-answer__question">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        <p class="question-answer__text question-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
                         <div class="question-answer__toggle"></div>
                     </div>
                     <div class="question-answer__answer">
-                        <p class="question-answer__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        <p class="question-answer__text answer-text">
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
+                            テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
                 </div>

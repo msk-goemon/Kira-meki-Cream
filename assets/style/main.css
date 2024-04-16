@@ -76,8 +76,8 @@ body {
 /* メイン画像上のフォント設定 */
 
 .top__container {
-  padding-top: 197px;
-  padding-left: 120px;
+  padding-top: 198px;
+  padding-left: 223px;
 }
 
 .top__brand-name {
@@ -117,7 +117,7 @@ body {
   justify-content: space-between;
   width: 1000px;
   background-color: #F0F4FF;
-  padding: 42px 46px;
+  padding: 40px 48px;
   margin: auto 0;
 }
 
@@ -128,6 +128,7 @@ body {
 }
 
 .cream-buy__price {
+  margin-top: 6px;
   font-size: 16px;
   letter-spacing: 0.1em;
 }
@@ -136,6 +137,7 @@ body {
   display: inline-block;
   width: 300px;
   padding: 16px 20px;
+  margin-top: 4px;
   background-color: #f0f0f0; /* 軽い背景色 */
   color: black; /* テキスト色 */
   font-size: 18px;
@@ -167,7 +169,6 @@ body {
 
 /* 背景画像の設定 */
 .cream-description__background-img {
-  position: relative;
   width: 100%;
   height: 550px;
   background-image: url("../image/cream_img.jpg");
@@ -175,9 +176,9 @@ body {
 
 /* 文字の表示位置、コンテンツサイズの設定 */
 .cream-description__sentence {
-  position: absolute;
-  top: 123px;
-  right: 131px;
+  margin-left: auto;
+  margin-right: 236px;
+  padding-top: 124px;
   width: 435px;
   height: 200px;
 }
@@ -196,6 +197,7 @@ body {
 
 .cream-description__text {
   margin-top: 16px;
+  padding-right: 14px;
   font-size: 14px;
   line-height: 32px;
   color: white;
@@ -272,12 +274,12 @@ body {
 }
 
 .question-answer__question {
-  background-color: #014897;
-  border: 1px solid #014897;
-  padding: 20px 25px;
+  background-color: white;
+  border: 1px solid white;
+  padding: 24px 25px 22px 22px;
   position: relative;
   cursor: pointer;
-  color: #fff;
+  color: black;
 }
 
 .question-answer__toggle {
@@ -305,10 +307,10 @@ body {
 
 .question-answer__answer {
   display: none;
-  padding: 25px 30px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  padding: 0 30px 18px 30px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
   background: #fff;
 }
 
@@ -320,11 +322,17 @@ body {
   font-size: 15px;
 }
 
+.answer-text {
+  padding-left: 27px;
+  line-height: 28px;
+}
+
 .question-answer__text::before {
   content: "Q．";
   position: absolute;
-  left: 0;
-  color: #fff;
+  left: 1px;
+  bottom: -2px;
+  color: black;
   font-size: 18px;
   font-weight: 500;
   font-family: "EB Garamond", serif;
@@ -332,7 +340,9 @@ body {
 
 .question-answer__answer .question-answer__text::before {
   content: "A．";
-  color: #de0000;
+  color: black;
+  left: -7px;
+  bottom: 84px;
 }
 
 
@@ -380,7 +390,120 @@ body {
 }
 
 
-@media screen and (max-width: 750px) {
+
+/* ここからSP表示設定 **********************************************************
+********************************************************************************/
+@media screen and (max-width: 767px) {
+
+/* 全体の設定 */
+  .section {
+    width: 100%;
+  }
+
+
+
+  /* トップ画像の設定 */
+  .top__background-img {
+    background-image: url("../image/main_sp_img.jpg");
+    aspect-ratio: 390 / 450;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+  }
+
+  .top__brand-name {
+    padding-top: 21px;
+  }
+
+  .top__brand-name h2 {
+    font-size: 24px;
+  }
+
+  .top__container {
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 361px;
+    margin-left: 23px;
+  }
+
+  .top__title {
+    font-size: 41px;
+    line-height: 51px;
+  }
+
+  .top__subtitle {
+    font-size: 20px;
+  }
+
+
+/* クリーム購入セクション *********************************************************
+**********************************************************************************/
+
+.cream__background--top {
+  margin-top: 157px;
+}
+
+.cream__background {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+.cream-buy {
+  display: block;
+  width: 100%;
+  padding: 20px 46px 15px;
+}
+
+.cream-buy__text {
+  text-align: center;
+}
+
+.cream-buy__title {
+  font-size: 18px;
+}
+
+.cream-buy__price {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.cream-buy__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 18px 0;
+}
+
+.cream-buy__button--onlineshop, .cream-buy__button--buy {
+  margin-right: 0; /* 個別のボタンの右マージンを取り除く */
+}
+
+.cream-buy__button--buy {
+  margin-top: 20px;
+}
+
+/* クリーム説明セクションの設定 ***************************************************
+*********************************************************************************/
+
+.cream-description__background-img {
+  background-image: url("../image/cream_sp_img.jpg");
+  width: 100%;
+}
+
+
+  /* Q&Aセクションの設定 *********************************************************
+  ********************************************************************************/
+
+  .question-answer__inner {
+    width: 100%;
+  }
+}
+
+
+
+
+/* @media screen and (max-width: 750px) {
   .question-answer__inner {
       width: auto;
   }
@@ -395,10 +518,9 @@ body {
   }
 }
 
-/* 応答性のあるデザインのためのメディアクエリ */
 @media (max-width: 768px) {
   .voices-items__inner {
-      flex-direction: column; /* スクリーンが狭いときにアイテムを縦に並べる */
+      flex-direction: column;
       gap: 15px;
   }
-}
+} */
