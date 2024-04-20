@@ -148,6 +148,25 @@ body {
   transition: background-color 0.3s; /* 背景色のトランジション */
 }
 
+.cream-buy__button button {
+  width: 100%; /* ボタンの幅をフォームの幅に合わせる */
+  padding: 16px 20px; /* パディングでボタンの大きさを調整 */
+  background-color: #f0f0f0; /* 軽い背景色 */
+  color: black; /* テキスト色 */
+  font-size: 18px; /* フォントサイズ */
+  font-weight: 600; /* フォントの太さ */
+  text-align: center; /* テキストを中央寄せ */
+  border: none; /* 枠線なし */
+  border-radius: 50px; /* 角を丸くする */
+  cursor: pointer; /* カーソルをポインターにする */
+  outline: none; /* アウトラインを消す */
+  transition: background-color 0.3s; /* 背景色の変更にアニメーションを設定 */
+}
+
+.cream-buy__button button:hover {
+  background-color: #e0e0e0; /* ホバー時の背景色 */
+}
+
 .cream-buy__button:hover {
   background-color: #e0e0e0; /* ホバー時の背景色 */
 }
@@ -211,6 +230,12 @@ body {
 /* お客様の声セクションの設定 **************************************************************
 ******************************************************************************************/
 
+
+/* sp画像の非表示設定 */
+.voices-items__customer-sp-img {
+  display: none;
+}
+
 /* 細かい余白の微調節 */
 .voices-items {
   margin-top: 76px;
@@ -232,7 +257,7 @@ body {
 /* 各アイテムのスタイルを定義します。 */
 .voices-items__item {
   background-color: #DBF7F9; /* 軽い青色の背景 */
-  padding: 46px 20px; /* 内側のパディング */
+  padding: 46px 31px 46px 14px; /* 内側のパディング */
   text-align: center; /* テキストを中央揃えに */
   width: 300px; /* アイテムの幅を設定 */
   height: 390px;
@@ -253,28 +278,80 @@ body {
   width: 100px; /* 画像の幅を設定 */
   height: auto; /* 高さを自動で調整 */
   margin-bottom: 10px; /* 画像とテキストの間隔を設定 */
+  margin-right: -10px;/*画像の微妙の配置*/
 }
 
 /* 名前のスタイルを定義します。 */
 .voices-items__name {
-  font-size: 1.2em; /* 名前のフォントサイズを設定 */
-  margin-bottom: 10px; /* 名前とテキストの間隔を設定 */
+  font-size: 1em; /* 名前のフォントサイズを設定 */
+  margin-bottom: 16px; /* 名前とテキストの間隔を設定 */
+  margin-right: -12px;/*名前の配置微調節*/
 }
 
 /* テキストのスタイルを定義します。 */
 .voices-items__text {
-  font-size: 0.9em; /* テキストのフォントサイズを設定 */
+  text-align: justify;
+  font-size: 1em; /* テキストのフォントサイズを設定 */
+  line-height: 28px;
+  margin-top: -3px;
 }
 
+/* slickの設定 ****************************/
 
+.slick-slider {
+  display: flex;
+  align-items: center;
+}
 
+/* slickの左右余白の設定 */
+.slick-list {
+  margin: 0 240px;
+}
+
+.slick-slide {
+  margin: 0 20px;
+}
+
+.slide-arrow {
+  position: absolute;
+  width: 48px;
+}
+
+.prev-arrow {
+  top: 171px;
+  left: 172px;
+}
+
+.next-arrow {
+  top: 171px;
+  right: 172px;
+}
+
+.slick-dots li button:before{
+  font-size:12px;/*初期値は6px*/
+  color: #46C4DB;
+}
+
+.slick-dots li{
+  width:8px;/*初期値は20px*/
+}
+
+.slick-dots{
+  bottom: -38px;/*初期値は-25px*/
+  right: 7px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #00AFBF;
+}
 
 /* Q&Aセクションの設定 ******************************
 ***************************************************/
 
 /* 背景のグラデーション設定 */
 .question-answer {
-  padding: 40px 0;
+  margin-top: 108px;
+  padding: 40px 0 12px;
   background-image: linear-gradient(to right, #F4FFE8, #C6F0FE);
 }
 
@@ -306,17 +383,17 @@ body {
 }
 
 .question-answer__toggle:before {
-  content: "▼";
+  content: url("../image/caret-down-fill.png");
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -4px;
+  left: 17px;
   right: 0;
   bottom: 0;
   margin: auto;
 }
 
 .question-answer__question.open .question-answer__toggle:before {
-  content: "ー";
+  content: url("../image/caret-up-fill.png");
 }
 
 .question-answer__answer {
@@ -363,13 +440,23 @@ body {
 /* フッターの設定 *******************************************************************
 ************************************************************************************/
 
+
 /* フッターセクションのコンテンツ均等配置設定と背景設定 */
 .footer__background-color {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 104px;
   background-color: #0071CE;
+}
+
+/* トップに戻るボタンの設定 */
+.js__top-button {
+  position: absolute;
+  width: 40px;
+  top: -40px;
+  right: 150px;
 }
 
 .footer__container {
@@ -395,13 +482,47 @@ body {
 
 .footer__copy-right {
   font-size: 12px;
+  margin-top: 8px;
   color: white;
 }
 
 /* footer__link--policyの左右の余白設定 */
 .footer__link--policy {
-  margin: 0 26px;
+  margin: 0 28px;
 }
+
+.footer__company-links {
+  margin-right: -42px;
+}
+@media screen and (max-width:1062px) {
+  .voices-items__item {
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 938px) {
+
+  .cream-buy {
+    display: block;
+    align-items: center;
+  }
+
+  .cream-buy__text {
+    text-align: center;
+  }
+
+  .cream-buy__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__container {
+    display: block;
+    text-align: center;
+  }
+}
+
 
 
 
@@ -425,8 +546,8 @@ body {
     aspect-ratio: 390 / 450;
     width: 100%;
     height: 450px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .top__brand-name {
@@ -535,8 +656,30 @@ body {
 
 /*お客様の声のセクション設定 ********************************************************
 **********************************************************************************/
+
+/* 画像表示の切り替え */
+.voices-items__customer-sp-img {
+  display: block;
+}
+
+.voices-items__customer-img {
+  display: none;
+}
+
+.voices-items__customer-sp-img img {
+  width: 80px;
+  margin: 0 auto;
+  margin-right: 66px;
+  margin-top: -22px;
+}
+
 .voices-items {
   margin-top: 47px;
+}
+
+.voices-items__item {
+  padding: 46px 31px 24px 14px;
+  height: auto;
 }
 
 .voices-items__title {
@@ -549,17 +692,68 @@ body {
   letter-spacing: 1px;
 }
 
+.voices-items__name {
+  font-size: 14px;
+  margin-bottom: 19px;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.voices-items__text {
+  font-size: 14px;
+}
+
+/* slickの設定 */
+.slick-list {
+  margin: 0 34px;
+}
+
+.prev-arrow {
+  width: 32px;
+  top: 152px;
+  left: 16px;
+}
+
+.next-arrow {
+  width: 32px;
+  top: 152px;
+  right: 16px;
+}
+
+.slick-dots li button:before{
+  font-size: 10px;/*初期値は6px*/
+  color: #46C4DB;
+}
+
+.slick-dots li{
+  width:7px;/*初期値は20px*/
+}
+
+.slick-dots{
+  bottom: -31px;/*初期値は-25px*/
+  right: 7px;
+}
+
   /* Q&Aセクションの設定 *********************************************************
   ********************************************************************************/
 
 
   .question-answer {
+    margin-top: 74px;
     padding: 31px 0;
     letter-spacing: 2px;
   }
 
+  .question-answer__box {
+    margin-bottom: 20px;
+  }
+
   .question-answer__title {
     font-size: 30px;
+  }
+
+  .question-answer__subtitle {
+    margin-bottom: 38px;
   }
 
   .question-answer__inner {
@@ -574,7 +768,7 @@ body {
 
   .question-answer__answer {
     margin: 0 16px;
-    padding: 0 10px 18px 30px;
+    padding: 0 10px 27px 30px;
   }
 
 
@@ -584,7 +778,7 @@ body {
 
   .answer-text {
     padding-left: 12px;
-    margin-top: -11px;
+    margin-top: -10px;
     letter-spacing: 0;
   }
 
@@ -595,9 +789,15 @@ body {
 
   .question-answer__text::before {
     left: 7px;
-    bottom: 27px;
+    top: 1px;
     font-size: 16px;
     letter-spacing: 0px;
+  }
+
+  .question-answer__answer
+  .question-answer__text::before {
+    left: -15px;
+    top: 0;
   }
 
   .question-answer__toggle:before {
@@ -607,6 +807,48 @@ body {
     bottom: 0;
   }
 
+
+  /* フッターの設定 **************************************
+  **********************************************************/
+
+
+  .js__top-button {
+    right: 15px;
+  }
+
+  .footer__background-color {
+    height: 165px;
+  }
+
+
+  .footer__container {
+    display: block;
+    text-align: center;
+  }
+
+  .footer__shop-name {
+    padding-left: 6px;
+    font-size: 28px;
+    margin-top: -3px;
+  }
+
+  .footer__link {
+    font-size: 12px;
+  }
+
+  .footer__company-links {
+    margin-top: 15px;
+    margin-right: 0;
+  }
+
+.footer__link--policy {
+  margin: 0 26px;
+}
+
+  .footer__copy-right {
+    font-size: 11px;
+    margin-top: 23px;
+  }
 }
 
 
