@@ -76,15 +76,17 @@ body {
 /* メイン画像上のフォント設定 */
 
 .top__container {
-  padding-top: 198px;
+  padding-top: 200px;
   padding-left: 223px;
 }
 
 .top__brand-name {
+  width: 170px;
   display: flex;
   justify-content: center;
-  padding-top: 28px;
-  padding-left: 6px;
+  padding-top: 32px;
+  padding-left: 2px;
+  margin: 0 auto;
 }
 
 .top__brand-name h2 {
