@@ -138,7 +138,7 @@ body {
 .cream-buy__button {
   display: inline-block;
   width: 300px;
-  padding: 16px 20px;
+  padding: 15px 20px;
   margin-top: 4px;
   background-color: #f0f0f0; /* 軽い背景色 */
   color: black; /* テキスト色 */
@@ -150,11 +150,16 @@ body {
   transition: background-color 0.3s; /* 背景色のトランジション */
 }
 
-.cream-buy__button button {
+.cream-buy__button--buy {
+  display: inline-block;
+  width: 300px;
+  border-radius: 50px;
+}
+
+.cream-buy__button--buy button {
   width: 100%; /* ボタンの幅をフォームの幅に合わせる */
-  padding: 16px 20px; /* パディングでボタンの大きさを調整 */
-  background-color: #f0f0f0; /* 軽い背景色 */
-  color: black; /* テキスト色 */
+  background-color: #5DD5AB; /* 軽い背景色 */
+  color: white; /* テキスト色 */
   font-size: 18px; /* フォントサイズ */
   font-weight: 600; /* フォントの太さ */
   text-align: center; /* テキストを中央寄せ */
@@ -164,6 +169,7 @@ body {
   outline: none; /* アウトラインを消す */
   transition: background-color 0.3s; /* 背景色の変更にアニメーションを設定 */
 }
+
 
 .cream-buy__button button:hover {
   background-color: #e0e0e0; /* ホバー時の背景色 */
@@ -353,7 +359,7 @@ body {
 /* 背景のグラデーション設定 */
 .question-answer {
   margin-top: 108px;
-  padding: 40px 0 12px;
+  padding: 40px 0 22px;
   background-image: linear-gradient(to right, #F4FFE8, #C6F0FE);
 }
 
@@ -486,11 +492,13 @@ body {
 
 /* footer__link--policyの左右の余白設定 */
 .footer__link--policy {
-  margin: 0 28px;
+  margin: 0 32px;
 }
 
 .footer__company-links {
-  margin-right: -42px;
+  display: flex;
+  margin-right: -8px;
+  list-style: none;
 }
 @media screen and (max-width:1062px) {
   .voices-items__item {
@@ -512,6 +520,15 @@ body {
 
   .cream-buy__buttons {
     display: flex;
+    justify-content: center;
+  }
+
+  .footer__shop-name {
+    width: 170px;
+    margin: 0 auto;
+  }
+
+  .footer__company-links {
     justify-content: center;
   }
 
@@ -549,7 +566,9 @@ body {
   }
 
   .top__brand-name {
-    padding-top: 21px;
+    width: 144px;
+    padding-left: 1px;
+    padding-top: 24px;
   }
 
   .top__brand-name h2 {
@@ -559,7 +578,7 @@ body {
   .top__container {
     padding-top: 0;
     padding-left: 0;
-    margin-top: 361px;
+    margin-top: 365px;
     margin-left: 23px;
   }
 
@@ -828,9 +847,8 @@ body {
   }
 
   .footer__shop-name {
-    padding-left: 6px;
-    font-size: 28px;
-    margin-top: -3px;
+    width: 167px;
+    margin: -2px auto 0;
   }
 
   .footer__link {
@@ -838,12 +856,13 @@ body {
   }
 
   .footer__company-links {
-    margin-top: 15px;
+    margin-top: 20px;
     margin-right: 0;
+    padding-left: 13px;
   }
 
 .footer__link--policy {
-  margin: 0 26px;
+  margin: 0 30px;
 }
 
   .footer__copy-right {
