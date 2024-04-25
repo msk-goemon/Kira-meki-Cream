@@ -71,6 +71,9 @@ body {
 .top__background-img {
   height: 720px;
   background-image: url("../image/main_img.jpg");
+  background-color: #D6C5B5;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* メイン画像上のフォント設定 */
@@ -259,7 +262,9 @@ body {
 
 /* コンテナをFlexboxに設定し、各アイテムを横並びにします。 */
 .voices-items__inner {
-
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 60px;
 }
 
 /* 各アイテムのスタイルを定義します。 */
@@ -267,7 +272,7 @@ body {
   background-color: #DBF7F9; /* 軽い青色の背景 */
   padding: 46px 31px 46px 14px; /* 内側のパディング */
   text-align: center; /* テキストを中央揃えに */
-  width: 300px; /* アイテムの幅を設定 */
+  max-width: 300px; /* アイテムの幅を設定 */
   height: 390px;
 }
 
@@ -312,8 +317,10 @@ body {
 }
 
 /* slickの左右余白の設定 */
+
 .slick-list {
-  margin: 0 240px;
+  max-width: 1020px;
+  margin: auto;
 }
 
 .slick-slide {
@@ -327,12 +334,12 @@ body {
 
 .prev-arrow {
   top: 171px;
-  left: 172px;
+  left: 7px;
 }
 
 .next-arrow {
   top: 171px;
-  right: 172px;
+  right: 7px;
 }
 
 .slick-dots li button:before{
@@ -353,13 +360,17 @@ body {
   color: #00AFBF;
 }
 
+#slick-slide01 {
+  width: 200px;
+}
+
 /* Q&Aセクションの設定 ******************************
 ***************************************************/
 
 /* 背景のグラデーション設定 */
 .question-answer {
   margin-top: 108px;
-  padding: 40px 0 22px;
+  padding: 40px 0 16px;
   background-image: linear-gradient(to right, #F4FFE8, #C6F0FE);
 }
 
@@ -374,7 +385,7 @@ body {
 
 .question-answer__question {
   background-color: white;
-  padding: 24px 25px 22px 22px;
+  padding: 24px 25px 23px 22px;
   position: relative;
   cursor: pointer;
   color: black;
@@ -405,7 +416,7 @@ body {
 
 .question-answer__answer {
   display: none;
-  padding: 0 30px 18px 30px;
+  padding: 0 30px 20px 30px;
   background: #fff;
 }
 
@@ -607,7 +618,7 @@ body {
 .cream-buy {
   display: block;
   width: 100%;
-  padding: 20px 46px 15px;
+  padding: 21px 46px 16px;
 }
 
 .cream-buy__text {
@@ -684,6 +695,10 @@ body {
   display: none;
 }
 
+.voices-items__inner {
+  padding: 0;
+}
+
 .voices-items__customer-sp-img img {
   width: 80px;
   margin: 0 auto;
@@ -730,6 +745,7 @@ body {
   width: 32px;
   top: 152px;
   left: 16px;
+  z-index: 2;
 }
 
 .next-arrow {
@@ -858,7 +874,7 @@ body {
   .footer__company-links {
     margin-top: 20px;
     margin-right: 0;
-    padding-left: 13px;
+    padding-left: 0;
   }
 
 .footer__link--policy {
